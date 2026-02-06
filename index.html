@@ -287,9 +287,14 @@
             <div class="price">
                 $29.99 <span>$49.99</span>
             </div>
-            <button class="purchase-btn" onclick="purchase()">
+            <button id="Purchase Button" class="purchase-btn" onclick="purchase()">
                 🛒 Buy Now & Get Lucky!
             </button>
+            <script type="text/javascript">
+              $('#addToCartButton').click(function() {
+                fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+              });
+            </script>
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">🚚</div>
